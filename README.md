@@ -1,116 +1,66 @@
 # Introduction
+Je m'appelle Hind Elibrami. Je m'intéresse à la conception d'expériences interactives qui répondent à des besoins réels, ou qui peuvent améliorer une expérience existante. J'aime aussi l'aspect créatif et artistique du design, notamment le fait de pouvoir m'inspirer de mes intérêts personnels, de références visuelles ou de concepts que je trouve intéressants.
 
-Je m'appelle Hind Elibrami. J'aime beaucoup tout ce qui touche à ... 
+Ce journal de bord, réalisé dans le cadre du cours DSN230, regroupe l'ensemble de mes projets du module 1. Il contient mes concepts, mes apprentissages, les difficultés rencontrées et les ajustements apportés. Des photos et vidéos supplémentaires sont aussi incluses dans les dossiers respectifs de chaque projet.
 
-Ce journal de bord, réalisé dans le cadre du cours DSN230, contient l'ensemble de mes projets. Dedans, j'y ai inclus mes apprentissages, mes difficultés, ainsi que tout le processus. Des photos et vidéos sont inclus dans les dossiers de chacun des projets, présents dans le dépôt.
+**Note :** Certaines vidéos sont trop volumineuses pour être visualisées directement sur GitHub, il suffit de cliquer sur « View raw » pour les télécharger et les visionner.
 
-
-# Projet 1 - MakeCode
-
-
+# Projet 1 : MakeCode
 ## Concept 
-
-
-Mon concept consistait à réaliser un gestionnaire de tâches interactif. L'utilisateur choisi les 10 tâches principales qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il lui suffit de secouer le microprocesseur pour qu'il active une lumière verte accompagnée d'un petit son.
-
-Ainsi, une tâche accomplie correspond à une lumière verte et à un petit son. Une fois les 10 tâches complétées, donc les 10 lumières activées, le microprocesseur active une lumière multicolore avec un son de victoire qui se répète 5 fois afin de signaler à l'utilisateur qu'il a accompli toutes les tâches de sa journée!
-
+Mon concept consistait à réaliser un compteur de tâches interactif. L'utilisateur choisit 10 tâches qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il secoue le microprocesseur, ce qui allume une lumière verte accompagnée d'un petit son. Une fois les 10 tâches complétées, le Circuit Playground active une lumière multicolore avec un son de victoire, qui se répète 5 fois, pour célébrer l'acomplissement de toutes les tâches.
 
 ## Fonctionnement
-
-
-Le projet utilise le capteur de ..., ce qui détecte lorsque le microprocesseur est secoué. Une variable permet de ...
-
+Le projet utilise l'accéléromètre pour détecter lorsque le Circuit Playground est secoué. À chaque secousse, la variable « tasksCompleted », qui stocke le nombre de tâches complétées, augmente de 1, et une lumière verte et un petit son s'activent. Lorsque la valeur de la variable atteint 10, l'animation de célébration est activée (lumière multicolore et son de victoire répété). 
 
 ## Difficultés / ajustements
-
-
-J'ai eu de la difficulté à trouver mon concept au début. J'avais eu le syndrome de la page blanche, mais après avoir fait un remue-méninges, j'ai réfléchi à ce qui m'interpelle le plus dans la vie de tous les jours. 
-
-Pour moi, c'est surtout le fait de me motiver à évoluer pas à pas, en célébrant mes accomplissements, mêmes les plus petits. Donc j'ai voulu transformer ce concept de manière tangible et interactive.
-
-J'ai également eu de la difficulté à comprendre le rôle et fonctionnement des différents blocs, mais avec de l'expérimentation j'ai fini par m'y faire.
+J'ai eu de la difficulté à trouver mon concept au début, étant donné que je ne savais pas encore comment utiliser les capteurs disponibles. Après un remue-méninges, j'ai choisi de réaliser un outil de développement personnel permettant de célébrer les petits accomplissements au quotidien. 
 
 ## Ce que j'ai appris
+Comme il s'agissait de mon premier contact avec Adafruit MakeCode, ce projet m'a permis de me familiariser avec l'interface et les différents capteurs. J'ai aussi apprécié la possibilité de visualiser l'équivalent des blocs en Javascript. Cela m'a permis de faire un lien visuel entre les deux formes de programmation.
 
-Comme il s'agissait du premier travail de la session et également de mon premier contact avec Adafruit MakeCode, ce projet m'a permis de me familiariser avec l'interface, les différents blocs, capteurs et fonctions, 
-
-Je trouve sympa le fait que l'on peut visualiser l'équivalent des blocs en javascript. Cela permet de faire un lien entre la programmation visuelle et les langages de programmation.
-
-
-# Projet 2 - MakeCode
-
-
+# Projet 2 : MakeCode
 ## Concept 
+Mon concept se nomme « Passeport de souvenirs ». Il s'agit d'un album de voyage interactif permettant à l'utilisateur d'insérer progressivement des photos dans différents compartiments. 
 
-Mon concept se nomme ''passeport de souvenirs''. 
-
-
-Mon inspiration provient de la série ''Zero Pound World Tour'', de Niko Omilana, et également le concept de remplir un livre avec des mots ou conseils écrits dans la langue natale de gens lors de voyages, que j'avais vu sur les réseaux sociaux. 
+Chaque photo insérée active une lumière et un son, puis une animation finale s'active lorsque toutes les catégories de photos sont complétées. Mon prototype s'inspire notamment du journal numérique dans la série Youtube « Zero Pound World Tour » de Niko Omilana, ainsi que de mon intérêt pour le voyage.
 
 ## Fonctionnement
-
-
-
-## Ce que j'ai appris
-
-
+Le passeport et les polaroids étaient faits en carton. Chaque polaroid possédait une fente laissant passer la lumière, ainsi qu'une couche d'aluminium à l'endos, servant de contact conducteur. Dans la couverture arrière du passeport, où le Circuit Playground était dissimulé, des pinces alligator reliaient les pads capacitifs A4, A5, A6 et A7, ainsi que le GND à des morceaux d'aluminium. Ces morceaux d'aluminium étaient placés de sorte à entrer en contact avec l'aluminium des polaroid lorsqu'ils étaient insérés. Chaque catégorie n'était comptée qu'une seule fois, et lorsqu'elles étaient toutes complétées, l'animation finale et le son de victoire étaient activés.
 
 ## Difficultés / ajustements
-....
+J'ai eu de la difficulté à concevoir une logique qui empêchait une même catégorie d'être comptée plusieurs fois. Alors, j'ai utilisé des variables booléennes et des blocs « if » séparés pour que chaque catégorie ait un comportement distinct. 
+J'ai aussi eu de la difficulté à comprendre le fonctionnement de la fonction « digitalRead() », mais j'ai fini par en comprendre la logique. 
+Pour activer les capteurs, il fallait un double contact pour chaque polaroid : chacun devait pouvoir entrer en contact avec son pad capacitif respectif ainsi que le GND en même temps. J'ai donc dû ajuster la forme du morceau d'aluminium du GND (forme en x) pour qu'il puisse entrer en contact avec chaque compartiment. 
+Finalement, présenter le projet devant la classe avec un microphone représentait aussi un défi pour moi, mais cela m'a permis de pratiquer à vulgariser un projet dans un temps limité (90 secondes) à un grand groupe. 
 
-Le présenter devant la classe était réellement un défi pour moi, mais ça m'a permis de ...
+## Ce que j'ai appris
+Ce projet m'a permis d'apprendre à réfléchir à l'interaction entre un objet physique, l'électronique et du code. 
 
-
-
-# Projet 3 - Arduino
-
-
+# Projet 3 : Arduino
 ## Concept 
-
-
+Pour ce concept, mon objectif était de réaliser un prototype simplifié inspiré des « Echo Flowers » provenant du jeu vidéo Undertale. Au lieu que le Circuit Playground (qui représente la fleur) répète le dernier son capté, il traduit les sons selon leur intensité en différentes luminosités et teintes de bleu.
 
 ## Fonctionnement
-
-
-
-## Ce que j'ai appris
-
-
+Le microphone du Circuit Playground mesure le niveau sonore. Celui-ci est ensuite classé, selon ses valeurs approximatives en décibels, dans l'un des trois niveaux d'intensité définis : basse (jusqu'à 68 dB), moyenne (de 69 dB à 76 dB) ou élevée (77 dB et plus). Chaque niveau sonore active une teinte de bleu et une luminosité différente. 
 
 ## Difficultés / ajustements
+J'ai eu de la difficulté à trouver des intervalles de valeurs sonores assez différents pour chaque niveau sonore, de sorte que les changements de lumière soient assez stables. Le Serial Monitor m'a permis de visualiser et tester les différents seuils afin de définir clairement les trois niveaux sonores. Enfin, j'ai réglé la mesure du microphone à 200 ms pour qu'il ne réagisse pas trop rapidement ou trop lentement.
 
+## Ce que j'ai appris
+Ce projet m'a permis d'apprendre comment utiliser du code C++ avec le Circuit Playground, et à utiliser un microphone comme capteur.
 
-
-
-# Projet 4 - E-textiles
-
-
+# Projet 4 : E-textiles
 ## Concept 
-
-Il s'agissait d'un projet débuté en classe qui avait pour but de se familiariser avec l'intégration de composantes électroniques dans le textile. Ce projet consistait à relier les pads capacitifs du Circuit Playground à des tissus, boutons ou d'autres objets à l'aide d'un fil conducteur, sur lesquels on peut appuyer.
-
+Ce projet, débuté en classe, avait pour but de se familiariser avec l'intégration de composantes électroniques dans le textile. Il consistait à relier les pads capacitifs du Circuit Playground à des tissus, boutons ou d'autres objets avec un fil conducteur.
 
 ## Fonctionnement
-
-Pour mon prototype, j'ai réalisé des « magic circles » au crochet avec du fil en acrylique afin de les utiliser comme boutons pour les pads capacitifs A1 et A7.
-
-De petits boutons métalliques conducteurs ont été cousus sur les cercles faits en crochet. Ils ont ensuite été reliés aux pads capacitifs avec le fil conducteur.
-
-Le code du Circuit Playground avait été fourni préalablement. Ce code fait en sorte que lorsque l'on touche un élément relié à un pad capacitif, cela active le son et la lumière de celui-ci. Dans ce cas, l'élément correspondait aux boutons « magic circles ».
-
+Pour mon prototype, j'ai réalisé des « magic circles » au crochet avec du fil en acrylique, utilisés comme boutons pour les pads capacitifs A1 et A7.
+De petits boutons métalliques conducteurs ont été cousus sur les cercles, puis reliés aux pads capacitifs avec le fil conducteur. Le code, fourni préalablement, faisait en sorte que lorsqu'un élément relié à un pad capacitif était touché, la lumière et le son respectifs étaient activés.
 
 ## Difficultés / ajustements
-
-Lors de la couture du « magic circle » du A7, j'ai remarqué que j'avais cousu le petit bouton en métal du mauvais côté. Cela faisait en sorte que bouton ne pouvait pas se fermer. J'ai dû défaire cette section, replacer le bouton métallique dans le bon sens, et le recoudre correctement. 
-
+Au début du projet, j'avais de la difficulté à coudre, puisque c'était la première fois que j'en faisais. J'ai aussi rencontré un problème lors de la couture du bouton métallique relié au pad capacitif A7. Je l'avais cousu au « magic circle » du mauvais côté, ce qui rendait sa fermeture impossible. J'ai dû défaire la couture de cette section et recoudre le bouton dans le bon sens. 
 
 ## Ce que j'ai appris
+Ce projet m'a permis d'apprendre les bases de la couture à la main. J'ai également pu combiner le crochet avec l'électronique textile. 
 
-Ce projet m'a tout d'abord permis d'apprendre les base de la couture à la main, une compétence que je n'avais jamais apprise auparavant et qui pourrait être très utile pour de futurs projets.
-
-J'ai également pu combiner une technique que je connaissais déjà, le crochet, avec l'électronique pour pouvoir réaliser un prototype interactif en textile. 
-
-Finalement, pendant le prototypage, j'ai testé la différence entre un matériau conducteur et un matériau isolant. J'ai cousu le fil isolant par-dessus une section de fil conducteur de sorte à le couvrir, et j'ai constaté que lorsque je touchais le fil isolant, la lumière et le son ne se déclenchaient pas. 
-
-Également, pour le bouton il fllait qu'il soit cousu au magic cricle avec du fil conducteur que au touché ca puisse activer le pad. 
+Finalement, j'ai testé la différence entre un matériau conducteur et un matériau isolant. J'ai constaté que lorsque le fil isolant était cousu par-dessus une section de fil conducteur, le contact n'activait pas les capteurs. 
