@@ -18,7 +18,7 @@ J'ai eu de la difficulté à trouver mon concept au début, étant donné que je
 ## Ce que j'ai appris
 Comme il s'agissait de mon premier contact avec Adafruit MakeCode, ce projet m'a permis de me familiariser avec l'interface et les différents capteurs. J'ai aussi apprécié la possibilité de visualiser l'équivalent des blocs en Javascript. Cela m'a permis de faire un lien visuel entre les deux formes de programmation.
 
-# Projet 2 : MakeCode
+# Projet 2 : MakeCode (passeport de souvenirs)
 ## Concept 
 Mon concept se nomme « Passeport de souvenirs ». Il s'agit d'un album de voyage interactif permettant à l'utilisateur d'insérer progressivement des photos dans différents compartiments. 
 
@@ -36,7 +36,7 @@ Finalement, présenter le projet devant la classe avec un microphone représenta
 ## Ce que j'ai appris
 Ce projet m'a permis d'apprendre à réfléchir à l'interaction entre un objet physique, l'électronique et du code. 
 
-# Projet 3 : Arduino
+# Projet 3 : Arduino (« Echo Flower »)
 ## Concept 
 Pour ce concept, mon objectif était de réaliser un prototype simplifié inspiré des « Echo Flowers » provenant du jeu vidéo Undertale. Au lieu que le Circuit Playground (qui représente la fleur) répète le dernier son capté, il traduit les sons selon leur intensité en différentes luminosités et teintes de bleu.
 
