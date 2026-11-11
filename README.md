@@ -42,6 +42,7 @@ Pour ce concept, mon objectif était de réaliser un prototype simplifié inspir
 
 ## Fonctionnement
 Le microphone du Circuit Playground mesure le niveau sonore. Celui-ci est ensuite classé, selon ses valeurs approximatives en décibels, dans l'un des trois niveaux d'intensité définis : basse (jusqu'à 68 dB), moyenne (de 69 dB à 76 dB) ou élevée (77 dB et plus). Chaque niveau sonore active une teinte de bleu et une luminosité différente. 
+Dans la vidéo avec la chute d'eau, les lumières adoptent une teinte de bleu progressivement plus foncée et plus lumineuse à fur et à mesure que l'intensité sonore augmente. J'ai aussi testé avec la trame sonore « Waterfall » de Undertale pour observer les fluctuations dans le comportement des lumières.
 
 ## Difficultés / ajustements
 J'ai eu de la difficulté à trouver des intervalles de valeurs sonores assez différents pour chaque niveau sonore, de sorte que les changements de lumière soient assez stables. Le Serial Monitor m'a permis de visualiser et tester les différents seuils afin de définir clairement les trois niveaux sonores. Enfin, j'ai réglé la mesure du microphone à 200 ms pour qu'il ne réagisse pas trop rapidement ou trop lentement.
