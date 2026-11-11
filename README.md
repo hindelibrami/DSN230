@@ -37,7 +37,7 @@ Pour activer les capteurs, il fallait un double contact pour chaque polaroid : c
 Finalement, présenter le projet devant la classe avec un microphone représentait aussi un défi pour moi, mais cela m'a permis de pratiquer à vulgariser un projet dans un temps limité (90 secondes) à un grand groupe. 
 
 ## Ce que j'ai appris
-Ce projet m'a permis d'apprendre à réfléchir à l'interaction entre un objet physique, l'électronique et du code. 
+Ce projet m'a permis d'apprendre à réfléchir à l'interaction entre un objet physique, l'électronique et le code. 
 
 # Projet 3 : Arduino (« Echo Flower »)
 ## Concept 
