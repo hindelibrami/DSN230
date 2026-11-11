@@ -29,8 +29,11 @@ Le passeport et les polaroids étaient faits en carton. Chaque polaroid posséda
 
 ## Difficultés / ajustements
 J'ai eu de la difficulté à concevoir une logique qui empêchait une même catégorie d'être comptée plusieurs fois. Alors, j'ai utilisé des variables booléennes et des blocs « if » séparés pour que chaque catégorie ait un comportement distinct. 
+
 J'ai aussi eu de la difficulté à comprendre le fonctionnement de la fonction « digitalRead() », mais j'ai fini par en comprendre la logique. 
+
 Pour activer les capteurs, il fallait un double contact pour chaque polaroid : chacun devait pouvoir entrer en contact avec son pad capacitif respectif ainsi que le GND en même temps. J'ai donc dû ajuster la forme du morceau d'aluminium du GND (forme en x) pour qu'il puisse entrer en contact avec chaque compartiment. 
+
 Finalement, présenter le projet devant la classe avec un microphone représentait aussi un défi pour moi, mais cela m'a permis de pratiquer à vulgariser un projet dans un temps limité (90 secondes) à un grand groupe. 
 
 ## Ce que j'ai appris
@@ -42,10 +45,13 @@ Pour ce concept, mon objectif était de réaliser un prototype simplifié inspir
 
 ## Fonctionnement
 Le microphone du Circuit Playground mesure le niveau sonore. Celui-ci est ensuite classé, selon ses valeurs approximatives en décibels, dans l'un des trois niveaux d'intensité définis : basse (jusqu'à 68 dB), moyenne (de 69 dB à 76 dB) ou élevée (77 dB et plus). Chaque niveau sonore active une teinte de bleu et une luminosité différente. 
+
 Dans la vidéo de son ambiant de chute d'eau, les lumières adoptent une teinte de bleu progressivement plus foncée et plus lumineuse à fur et à mesure que l'intensité sonore augmente. J'ai aussi testé avec la trame sonore « Waterfall » de Undertale pour observer les fluctuations dans le comportement des lumières.
 
 ## Difficultés / ajustements
-J'ai eu de la difficulté à trouver des intervalles de valeurs sonores assez différents pour chaque niveau sonore, de sorte que les changements de lumière soient assez stables. Le Serial Monitor m'a permis de visualiser et tester les différents seuils afin de définir clairement les trois niveaux sonores. Enfin, j'ai réglé la mesure du microphone à 200 ms pour qu'il ne réagisse pas trop rapidement ou trop lentement.
+J'ai eu de la difficulté à trouver des intervalles de valeurs sonores assez différents pour chaque niveau sonore, de sorte que les changements de lumière soient assez stables. Le Serial Monitor m'a permis de visualiser et tester les différents seuils afin de définir clairement les trois niveaux sonores. 
+
+Enfin, j'ai réglé la mesure du microphone à 200 ms pour qu'il ne réagisse pas trop rapidement ou trop lentement.
 
 ## Ce que j'ai appris
 Ce projet m'a permis d'apprendre comment utiliser du code C++ avec le Circuit Playground, et à utiliser un microphone comme capteur.
