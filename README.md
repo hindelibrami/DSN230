@@ -5,15 +5,15 @@ Ce journal de bord, réalisé dans le cadre du cours DSN230, regroupe l'ensemble
 
 **Note :** Certaines vidéos sont trop volumineuses pour être visualisées directement sur GitHub, il suffit de cliquer sur « View raw » pour les télécharger et les visionner.
 
-# Projet 1 : MakeCode
+# Projet 1 : MakeCode (compteur de tâches interactif)
 ## Concept 
-Mon concept consistait à réaliser un compteur de tâches interactif. L'utilisateur choisit 10 tâches qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il secoue le microprocesseur, ce qui allume une lumière verte accompagnée d'un petit son. Une fois les 10 tâches complétées, le Circuit Playground active une lumière multicolore avec un son de victoire, qui se répète plusieurs fois, pour célébrer l'acomplissement de toutes les tâches.
+Mon concept consistait à réaliser un outil de développement personnel permettant de célébrer les petits accomplissements au quotidien. L'utilisateur choisit 10 tâches qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il secoue le microprocesseur, ce qui allume une lumière verte accompagnée d'un petit son. Une fois les 10 tâches complétées, le Circuit Playground active une lumière multicolore avec un son de victoire, qui se répète plusieurs fois, pour célébrer l'acomplissement de toutes les tâches.
 
 ## Fonctionnement
 Le projet utilise « On Shake » pour détecter lorsque le Circuit Playground est secoué. À chaque secousse, la variable « tasksCompleted », qui stocke le nombre de tâches complétées, augmente de 1, et une lumière verte et un petit son s'activent. Lorsque la valeur de la variable atteint 10, l'animation de célébration est activée (lumière multicolore et son de victoire répété). 
 
 ## Difficultés / ajustements
-J'ai eu de la difficulté à trouver mon concept au début, étant donné que je ne savais pas encore comment utiliser les capteurs disponibles. Après un remue-méninges, j'ai choisi de réaliser un outil de développement personnel permettant de célébrer les petits accomplissements au quotidien. 
+J'ai eu de la difficulté à trouver mon concept au début, étant donné que je ne savais pas encore comment utiliser les capteurs disponibles. Après un remue-méninges, j'ai choisi d'utiliser le capteur de secousse plutôt que celui de la lumière ou de la température, par exemple, car ils sont plus difficile à gérer.
 
 ## Ce que j'ai appris
 Comme il s'agissait de mon premier contact avec Adafruit MakeCode, ce projet m'a permis de me familiariser avec l'interface et les différents capteurs. J'ai aussi apprécié la possibilité de visualiser l'équivalent des blocs en Javascript. Cela m'a permis de faire un lien visuel entre les deux formes de programmation.
