@@ -7,7 +7,7 @@ Ce journal de bord, réalisé dans le cadre du cours DSN230, regroupe l'ensemble
 
 # Projet 1 : MakeCode (compteur de tâches interactif)
 ## Concept 
-Mon concept consistait à réaliser un outil de développement personnel permettant de célébrer les petits accomplissements au quotidien. L'utilisateur choisit 10 tâches qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il secoue le microprocesseur, ce qui allume une lumière verte accompagnée d'un petit son. Une fois les 10 tâches complétées, le Circuit Playground active une lumière multicolore avec un son de victoire, qui se répète plusieurs fois, pour célébrer l'acomplissement de toutes les tâches.
+Mon concept consistait à réaliser un outil de développement personnel permettant de célébrer les petits accomplissements au quotidien. L'utilisateur choisit 10 tâches qu'il souhaite accomplir dans sa journée. Chaque fois qu'il en complète une, il secoue le Circuit Playground, ce qui allume une lumière verte accompagnée d'un petit son. Une fois les 10 tâches complétées, le Circuit Playground active une lumière multicolore avec un son de victoire, qui se répète plusieurs fois, pour célébrer l'acomplissement de toutes les tâches.
 
 ## Fonctionnement
 Le projet utilise « On Shake » pour détecter lorsque le Circuit Playground est secoué. À chaque secousse, la variable « tasksCompleted », qui stocke le nombre de tâches complétées, augmente de 1, et une lumière verte et un petit son s'activent. Lorsque la valeur de la variable atteint 10, l'animation de célébration est activée (lumière multicolore et son de victoire répété). 
